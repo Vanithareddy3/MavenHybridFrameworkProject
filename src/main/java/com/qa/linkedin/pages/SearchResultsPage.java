@@ -26,7 +26,7 @@ public int getResultsCount() {
 	//txt="showing","189,990","results";
 	String[] str=resText.split(" ");
 	//str[]=["showing","189,990","results"]
-	String finalResCount=str[1].replace(","," ").trim();
+	String finalResCount=str[1].replace(",","").trim();
 	//convert String into integer
 	int i=Integer.parseInt(finalResCount);
 	return i;

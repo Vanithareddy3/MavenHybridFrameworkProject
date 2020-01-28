@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -25,6 +26,7 @@ public class TestBase {
  public static WebDriver driver=null;
  protected static WebDriverWait wait=null;
  public static Properties prop=null;
+ public static Logger log=Logger.getLogger("devpinoyLogger");
  
 public TestBase() throws IOException{
   //create object for properties class
@@ -38,6 +40,7 @@ public TestBase() throws IOException{
 	  e.printStackTrace();
   }
 }
+
 public static void initWebdriver() throws IOException {
 	//fetch the browser name
   String browserName=prop.getProperty("browser");
@@ -56,8 +59,10 @@ public static void initWebdriver() throws IOException {
 	  WebDriverManager.iedriver().setup();
       driver=new InternetExplorerDriver();
 }
+  log.info("browser is launched");
   //add implicit wait command
   driver.manage().timeouts().implicitlyWait(TestUtil.IMPLICIT_WAIT,TimeUnit.SECONDS);
+ // driver.manage().timeouts().implicitlyWait(Integer.parseInt(prop.getProperty("implicitwait")),TimeUnit.SECONDS);
   //maximize the window
   driver.manage().window().maximize();
   //open the url

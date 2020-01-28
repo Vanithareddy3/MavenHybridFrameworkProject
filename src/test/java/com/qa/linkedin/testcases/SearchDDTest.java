@@ -35,8 +35,7 @@ public class SearchDDTest extends TestBase{
 	int cnt=srpg.getResultsCount();
 	System.out.println("the results count for "+s+" is-->"+cnt);
 	driver.navigate().back();
-	
-	  }
+	 }
   
   @DataProvider
   public Object[][] dp() throws IOException {

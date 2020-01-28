@@ -22,8 +22,8 @@ public class TestUtil extends TestBase {
 public TestUtil() throws IOException {
 	super();
 }
-public static final long IMPLICIT_WAIT=30;
-public static final long EXPLICIT_WAIT=10;
+public static final long IMPLICIT_WAIT=60;
+public static final long EXPLICIT_WAIT=60;
 
 public static String TESTDATA_SHEET_PATH1=System.getProperty("user.dir")+"\\src\\main\\java\\com\\qa\\linkedin\\data\\searchDataLinkedin.xlsx"; 
   static Workbook book;

@@ -21,6 +21,7 @@ WebElement signin_link;
 
 public boolean verifyLinkedinLogo() {
 	return Linkedin_logo.isDisplayed();
+	
 }
 public String getLinkedinLandingPageTitle() {
 	return driver.getTitle();
