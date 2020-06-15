@@ -27,7 +27,7 @@ public class ExtentReportListener extends TestBase implements ITestListener {
 		
 	}
 
-	private static final String OUTPUT_FOLDER = System.getProperty("user.dir")+"\\test-output";
+	private static final String OUTPUT_FOLDER = System.getProperty("user.dir")+"/test-output";
 	private static final String FILE_NAME = "TestExecutionReport.html";
 
 	private static ExtentReports extent = init();

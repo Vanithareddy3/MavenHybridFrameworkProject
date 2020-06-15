@@ -25,7 +25,7 @@ public TestUtil() throws IOException {
 public static final long IMPLICIT_WAIT=60;
 public static final long EXPLICIT_WAIT=60;
 
-public static String TESTDATA_SHEET_PATH1=System.getProperty("user.dir")+"\\src\\main\\java\\com\\qa\\linkedin\\data\\searchDataLinkedin.xlsx"; 
+public static String TESTDATA_SHEET_PATH1=System.getProperty("user.dir")+/src/main/java/com/qa/linkedin/data/searchDataLinkedin.xlsx"; 
   static Workbook book;
   static Sheet sheet;
   
@@ -52,7 +52,7 @@ public static String TESTDATA_SHEET_PATH1=System.getProperty("user.dir")+"\\src\
 	 //take a screenshot of sign in page
 	 File src=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 	 //copy to project location
-	 FileUtils.copyFile(src,new File(System.getProperty("user.dir")+"\\src\\Screenshots\\"+"screenshot_"+timeStamp()+".png"));
+	 FileUtils.copyFile(src,new File(System.getProperty("user.dir")+"/src/Screenshots/"+"screenshot_"+timeStamp()+".png"));
 	  }
  public static String timeStamp() {
 	 return new SimpleDateFormat("yyyy-MM-dd HH-mm-ss").format(new Date());
